@@ -31,19 +31,19 @@ Ordem para dominar Funções em JavaScript
 
     [x] Rest parameter (...args).
 
-    [] Spread operator no uso de funções.
+    [x] Spread operator no uso de funções.
 
-    [] Passagem por valor vs. por referência.
+    [x] Passagem por valor vs. por referência.
 
 4. Escopo e Contexto
 
-    [] Escopo de bloco (let, const vs var).
+    [x] Escopo de bloco (let, const vs var).
 
-    [] Shadowing.
+    [x] Shadowing.
 
-    [] O que é this.
+    [x] O que é this.
 
-    [] this em função normal vs arrow function.
+    [x] this em função normal vs arrow function.
 
     [] Métodos bind, call e apply.
 
