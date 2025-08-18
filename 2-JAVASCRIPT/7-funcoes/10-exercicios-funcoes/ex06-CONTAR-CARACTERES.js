@@ -11,9 +11,9 @@ const contarCaracteres = (caracteres) =>{
 
 let palavra = entrada('Digite a palavra: ');
 
-if(isNaN(palavra)){
+if(!palavra.trim()){
     let resultado = contarCaracteres(palavra);
     console.log(`A palavra ${palavra}, possui: ${resultado} caracteres`);
 }else{
-    console.log('ERRO! Houve algum erro de digitação. Tente novamente');
+    console.log('ERRO! Digite apenas letras, não números.');
 }
