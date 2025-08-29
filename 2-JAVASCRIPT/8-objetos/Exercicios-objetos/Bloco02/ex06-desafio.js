@@ -17,9 +17,39 @@ const biblioteca ={
         }
     ],
     emprestar(titulo){
-        if(titulo.disponivel === true){
-
+       for(let livro of this.livros){
+        if(livro.titulo === titulo ){
+            if(livro.disponivel){
+                livro.disponivel = false;
+                console.log(`Você emprestou ${livro.titulo}`)
+            }else{
+                console.log(`O livro ${livro.titulo} não está disponivel`)
+            }
+            return;
         }
+       }
+       console.log(`O livro ${titulo} não foi encontrado na biblioteca`)
+    },
+    devolver(titulo){
+        for(let livro of this.livros){
+            if(livro.titulo === titulo){
+                if(livro.disponivel === false){
+                    livro.disponivel = true
+                    console.log(`Você devolveu o Livro ${livro.titulo}!`)
+                }else{
+                    console.log(`O livro ${livro.titulo} já se encontra na biblioteca`)
+                }
+                return;
+            }
+        }
+        console.log(`O livro ${titulo} não pertence a biblioteca!`)
     }
 }
-console.log(biblioteca.emprestar('era uma vez'))
+biblioteca.emprestar('Era uma vez')
+biblioteca.emprestar('Petrus Logus')
+biblioteca.emprestar('Era uma vez')
+biblioteca.devolver('Petrus Logus')
+biblioteca.devolver('Era uma vez')
+biblioteca.devolver('Era uma vez')
+biblioteca.emprestar('Hobbit')
+biblioteca.devolver('Hobbit')
