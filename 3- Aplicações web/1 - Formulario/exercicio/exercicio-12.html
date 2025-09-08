@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario completo de cadastro de evento.</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        </div>
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </div>
+        <div>
+            <p>Escolha turno:</p>
+            <input type="radio" id="manha" name="turno" required>
+            <label for="manha">Manhã</label>
+            <input type="radio" id="tarde" name="turno" required>
+            <label for="tarde">Tarde</label>
+            <input type="radio" id="noite" name="turno" required>
+            <label for="noite">Noite</label>
+        </div>
+        <select name="atividade" id="selecaoAtividade" required>
+            <option value="">Selecionar</option>
+            <option value="palestra">Palestra</option>
+            <option value="workshop">Workshop</option>
+            <option value="oficina">Oficina</option>
+        </select>
+        <div>
+            <input type="checkbox" name="termos" id="termos" required>
+            <label for="termos">Aceitar termos</label>
+        </div>
+        <div>
+            <textarea name="mensagem" id="mensagem" placeholder="Envie uma mensagem"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
