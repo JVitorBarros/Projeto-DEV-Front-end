@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+div:hover{
+    border: 2px solid red;
+}
+.curso01{
+    background-color: rgba(0, 0, 0, 0.122);
+}
+.curso02{
+    background-color: rgba(0, 0, 0, 0.611);
+    color: white;
+}
