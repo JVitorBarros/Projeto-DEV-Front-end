@@ -5,9 +5,9 @@
 }
 
 body{
+    
     display: flex;
-    justify-content: center;
-    justify-content: space-around; 
+    justify-content: center; 
 }
 .caixas{
     border: 3px solid black;
