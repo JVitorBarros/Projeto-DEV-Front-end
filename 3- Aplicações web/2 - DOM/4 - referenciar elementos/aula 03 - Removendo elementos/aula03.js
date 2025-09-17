@@ -8,6 +8,8 @@ const cursos = ['HTML', 'CSS', 'JavaScript', 'React', 'PHP', 'MySQL'];
 // Usando o metodo map, vamos percorrer cada curso dentro do array
 cursos.map((elemento, posicao) =>{
     
+    /*  INICIANDO A INTRODUÇÃO DAS <div> NA CAIXA CURSO */
+
     //  Criando uma nova div, para que todo curso tenha uma <div>
     const novoElemento = document.createElement('div');
 
@@ -25,10 +27,27 @@ cursos.map((elemento, posicao) =>{
 
         //Removendo a div que for clicada da caixa de cursos
         caixaCursos.removeChild(evento.target);
+
     }));
+
+    /*  FIM DA INTRODUÇÃO DAS <div> */
+
+    /*  INICIANDO A INTRODUÇÃO DE "botão lixeira" NAS <div>*/
+    
+    //  criando um elemento <img>, para todos cursos
+    const botaoLixeira = document.createElement('img');
+
+    botaoLixeira.setAttribute('src', 'imagem/icon_lixeira_menor.png')
+
+
+
+    /*  FIM INTRODUÇÃO "botão lixeira" */
 
     // Adiciona a div criada ao container principal
     caixaCursos.appendChild(novoElemento)
+    
+    //  Adicionando a tag <img> criada dentro de cada <div>
+    novoElemento.appendChild(botaoLixeira);
 });
 
 
