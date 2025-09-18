@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Cursos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="caixa01" class="caixa">
+            <label for="entradaNomeCurso" class="conteudo">Nome do curso</label>
+            <input type="text" name="entradaNomeCurso" id="entradaNomeCurso" class="conteudo" placeholder=" Digite o nome do curso" required>
+            <button type="button" id="botaoAdicionar" class="botao conteudo">Adicionar</button>
+            <button type="button" id="botaoRemover" class="botao conteudo">Remover selecionado</button>
+            <button type="button" id="botaoSelecionar" class="botao conteudo">Curso selecionado</button>
+        </section>
+        <section id="caixa02" class="caixa">
+            <div id="c1" class="curso c1">
+                <label for="curso">HTML</label>
+                <input type="radio" name="curso" id="html" required>
+            </div>
+            <div id="c2" class="curso c1">
+                <label for="curso">CSS</label>
+                <input type="radio" name="curso" id="css" required>
+            </div>
+            <div id="c3" class="curso c1">
+                <label for="curso">JavaScript</label>
+                <input type="radio" name="curso" id="javascript" required>
+            </div>
+            <div id="c4" class="curso c1">
+                <label for="curso">React</label>
+                <input type="radio" name="curso" id="react" required>
+            </div>
+            <div id="c5" class="curso c1">
+                <label for="php">PHP</label>
+                <input type="radio" name="curso" id="php" required>
+            </div>
+            <div id="c6" class="curso c1">
+                <label for="mysql">MySQL</label>
+                <input type="radio" name="curso" id="mysql" required>
+            </div>
+        </section>
+        <script src="javascript.js"></script>
+    </main>
+</body>
+</html>

@@ -30,12 +30,12 @@ div{
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .botaoLixeira{
 
     height: 45px;
+    cursor: pointer;
 }
 .botaoLixeira:hover{
     height: 47px;

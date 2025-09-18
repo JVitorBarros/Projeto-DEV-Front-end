@@ -38,11 +38,10 @@ cursos.map((elemento, posicao) =>{
 
     // Adicionar um evento de 'click' em todos icons(lixeira)
     botaoLixeira.addEventListener('click', (evento)=>{
-        caixaCursos.removeChild(novoElemento);
+
+        //  remove a caixa pai do botão lixeira(a <div >)
+        caixaCursos.removeChild(evento.target.parentNode);
     })
-
-
-
     /*  FIM INTRODUÇÃO "botão lixeira" */
 
     // Adiciona a div criada ao container principal

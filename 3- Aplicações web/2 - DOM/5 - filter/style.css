@@ -1,0 +1,90 @@
+
+/* Estilização global */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main{
+    /*posição*/
+    display: flex;
+    justify-content: center;
+}
+
+/*  Caixa principal  */
+.caixa{
+    /*posição*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /*tamanho*/
+    width: 300px;
+    height: 500px;
+    overflow-y: auto;
+    /*estilos*/
+    border: 4px solid black;
+    background-color: rgba(209, 199, 199, 0.43);
+}
+
+/* Iniciando estilização dos conteudos dentro da caixa01*/
+.conteudo{
+    /*posição*/
+    margin-bottom: 15px;
+}
+
+/*  Campo de entrada    */
+#entradaNomeCurso{
+    /*tamanho*/
+    height: 25px;
+    width: 170px;
+    /*estilos*/
+    border: none;
+    text-indent: 10px;
+}
+
+/*  Botões  */
+.botao{
+    /*tamanho*/
+    height: 30px;
+    width: 140px;
+    /*estilo*/
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(4, 4, 110);
+    color: white;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.botao:hover{
+    width: 150px;
+    transition: 0.5s;
+}
+
+/* Iniciando estilização dos conteudos dentro da caixa02*/
+
+/* Área de seleção */
+.curso{
+    /*posição*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+
+
+    /*tamanho*/
+    width: 140px;
+    height: 35px;
+    flex-shrink: 0;
+
+    /*estilo*/
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(181, 181, 181, 0.522);
+}
+
