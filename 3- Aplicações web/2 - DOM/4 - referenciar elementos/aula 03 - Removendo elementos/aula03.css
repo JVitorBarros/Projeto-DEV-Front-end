@@ -32,8 +32,13 @@ div{
     border-radius: 5px;
     cursor: pointer;
 }
-div:hover{
-    border: 2px solid red;
+
+.botaoLixeira{
+
+    height: 45px;
+}
+.botaoLixeira:hover{
+    height: 47px;
 }
 .c1{
     background-color: rgba(0, 0, 0, 0.122);

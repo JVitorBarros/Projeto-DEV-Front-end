@@ -22,13 +22,6 @@ cursos.map((elemento, posicao) =>{
     // Insere o nome do curso como conteúdo da <div>
     novoElemento.innerHTML = elemento
 
-    // Adicioando um evento de click nas <div>
-    novoElemento.addEventListener('click', (evento =>{
-
-        //Removendo a div que for clicada da caixa de cursos
-        caixaCursos.removeChild(evento.target);
-
-    }));
 
     /*  FIM DA INTRODUÇÃO DAS <div> */
 
@@ -37,7 +30,16 @@ cursos.map((elemento, posicao) =>{
     //  criando um elemento <img>, para todos cursos
     const botaoLixeira = document.createElement('img');
 
-    botaoLixeira.setAttribute('src', 'imagem/icon_lixeira_menor.png')
+    // Insere um icon(lixeira) em cada curso  
+    botaoLixeira.setAttribute('src', 'imagem/icon_lixeira_menor.png');
+    
+    //Insere uma class CSS para estilização
+    botaoLixeira.setAttribute('class', 'botaoLixeira');
+
+    // Adicionar um evento de 'click' em todos icons(lixeira)
+    botaoLixeira.addEventListener('click', (evento)=>{
+        caixaCursos.removeChild(novoElemento);
+    })
 
 
 
