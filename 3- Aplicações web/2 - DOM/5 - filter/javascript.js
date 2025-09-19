@@ -1,24 +1,64 @@
 
-// Chamando a entrada de curso
-const entradaCurso = document.querySelector('#entradaNomeCurso');
 //  Chamando o botao para adicionar os cursos
 const botaoAdicionar = document.querySelector('#botaoAdicionar');
+//  Chamando o botao de remover selecionado
+const botaoRemover = document.querySelector('#botaoRemover')
 //  Chamando os curso
 const todosCursos = [...document.querySelectorAll('.curso')];
 //  Chamando a segunda caixa
 const segundaCaixa = document.querySelector('#caixa02');
+// Chamando a entrada dos nomes cursos
+const entradaCurso = document.querySelector('#entradaNomeCurso');
 
 
 //  Chamando um evento de click no botao adicionar
-    botaoAdicionar.addEventListener('click', (evento)=>{
-        const novoCurso = document.createElement('div');
-        const 
-        let quantidadeCurso = ++todosCursos.length;
-        novoCurso.setAttribute('id', `c${quantidadeCurso}` );
-        novoCurso.setAttribute('class', 'curso c1');
-        
+botaoAdicionar.addEventListener('click', (evento) => {
 
-        segundaCaixa.appendChild(novoCurso)
-    
-});    
+const nomeCurso = entradaCurso.value.toUpperCase().trim();
 
+// criando uma condição para caso não tenha valor ou valor igual  
+if (nomeCurso === '') {
+    alert('Insira o curso que deseja adicionar');
+} else if (todosCursos.includes(nomeCurso)) {
+    alert('O curso já foi adicionado');
+} else {
+    // Criando nova div para o curso
+    const novoDivCurso = document.createElement('div');
+    let qtdCurso = todosCursos.length + 1;
+    novoDivCurso.setAttribute('id', `c${qtdCurso}`);
+    novoDivCurso.setAttribute('class', 'curso c1');
+
+    // Criando label
+    const tagEntradaCurso = document.createElement('label');
+    tagEntradaCurso.setAttribute('for', nomeCurso);
+    tagEntradaCurso.textContent = nomeCurso;
+
+    // Criando input
+    const novoInputCurso = document.createElement('input');
+    novoInputCurso.setAttribute('type', 'radio');
+    novoInputCurso.setAttribute('name', 'curso');
+    novoInputCurso.setAttribute('id', nomeCurso);
+    novoInputCurso.setAttribute('required', '');
+
+    // Montando a div
+    novoDivCurso.appendChild(tagEntradaCurso);
+    novoDivCurso.appendChild(novoInputCurso);
+    segundaCaixa.appendChild(novoDivCurso);
+
+    // Adicionando o curso ao array
+    todosCursos.push(nomeCurso);
+
+    // Limpa o campo de entrada
+    entradaCurso.value = '';
+}
+});
+
+//  Chamando evento de click 
+botaoRemover.addEventListener('click', evento =>{
+    const todosRadios = [...document.querySelectorAll('input[type=radio]')];
+    const radioSelecionado = todosRadios.filter(elemento =>{
+        return elemento.checked;
+    })
+
+    console.log(radioSelecionado)
+});
