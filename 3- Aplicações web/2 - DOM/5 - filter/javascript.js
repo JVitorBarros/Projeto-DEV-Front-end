@@ -55,10 +55,20 @@ if (nomeCurso === '') {
 
 //  Chamando evento de click 
 botaoRemover.addEventListener('click', evento =>{
+    //  Chamando um array de todos os radios dentro da <div>
     const todosRadios = [...document.querySelectorAll('input[type=radio]')];
+    //  Usando o filter para selecionar apenas o radio selecionado
     const radioSelecionado = todosRadios.filter(elemento =>{
         return elemento.checked;
     })
-
-    console.log(radioSelecionado)
+    // percorrendo o array para o radio selecionado
+    radioSelecionado.map(elemento =>{
+    //  removendo a <div> da caixa pai
+    segundaCaixa.removeChild(elemento.parentNode)
+    // Criando uma condição para eliminar o curso selecionado do array
+    const index = todosCursos.indexOf(elemento.id);
+        if(index !== -1){
+            todosCursos.splice(index, 1);
+        }
+    })
 });
